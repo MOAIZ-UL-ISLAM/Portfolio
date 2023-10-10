@@ -9,16 +9,20 @@ const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
 
 
-  const sendEmail = (e:any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const currentForm = form.current;
 
-    emailjs.sendForm('service_prxp90j', 'template_9fzkyfn', form.current, 'vcBKmfWyOpHUY2xMB')
+    if(currentForm){
+      emailjs.sendForm('service_prxp90j', 'template_9fzkyfn', currentForm, 'vcBKmfWyOpHUY2xMB')
       .then((result) => {
           console.log(result.text);
-          form.current.reset()
+          currentForm.reset()
       }, (error) => {
           console.log(error.text);
       });
+    }
+  
   };
 
   return (
@@ -39,7 +43,8 @@ const Contact = () => {
       </p>
       <form 
        ref={form}
-       className="mt-10 flex flex-col dark:text-black" onSubmit={sendEmail}>
+       className="mt-10 flex flex-col dark:text-black"
+        onSubmit={sendEmail}>
       <input
           className="h-14 px-4 my-3 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="name"
