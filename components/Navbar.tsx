@@ -5,7 +5,6 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 
 
-
 export const Navbar = () => {
   return (
     <header className="z-[999] relative">
@@ -34,7 +33,9 @@ export const Navbar = () => {
             className="h-3/4 flex items-center justify-center relative"
             key={link.hash}  
           >
-            <Link href={link.hash}
+            <Link
+          
+            href={link.hash}
             className="w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition">
             {link.name}
             </Link>
