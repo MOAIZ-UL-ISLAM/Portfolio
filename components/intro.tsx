@@ -41,7 +41,7 @@ export const Intro = () => {
             height="230"
             quality="100"
             priority={true}
-            className="h-28 w-28 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+            className="h-28 w-28 rounded-full object-contain border-[0.35rem] border-white shadow-xl"
             />
         </motion.div>
 
