@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   BiLogoPython,
   BiLogoJavascript,
@@ -16,13 +18,14 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { DiDjango } from "react-icons/di";
 
 const Skills = () => {
+  const notify = () => toast("Wow so easy!");
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.5 }}
       id="skills"
-      className="flex relative  text-center md:text-left xl:flex-row 
+      className=" flex relative  text-center md:text-left xl:flex-row 
     max-w-[1300px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
     >
       <h1 className="absolute top-4 uppercase sm:top-14 lg:top-12 tracking-[20px] text-gray-500 text-4x1 text-center ">
@@ -65,6 +68,10 @@ const Skills = () => {
         <span className="text-6xl  cursor-pointer  border border-black/5 rounded-full p-2 text-yellow-300">
           <BiLogoJavascript />
         </span>
+        <div>
+        <button onClick={notify}>Notify!</button>
+        <ToastContainer />
+      </div>
       </div>
     </motion.div>
   );
