@@ -19,21 +19,21 @@ export default function Footer() {
         </Link>
         <Link
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://twitter.com/moaiz0404"
           target="_blank"
         >
           <FaXTwitter />
         </Link>
         <Link
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.facebook.com/profile.php?id=100005708386670"
           target="_blank"
         >
           <BsFacebook />
         </Link>
         <Link
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://github.com/MOAIZ-UL-ISLAM"
           target="_blank"
         >
           <BsGithub />
