@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
   BiLogoPython,
@@ -18,7 +17,6 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { DiDjango } from "react-icons/di";
 
 const Skills = () => {
-  const notify = () => toast("Wow so easy!");
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -69,8 +67,7 @@ const Skills = () => {
           <BiLogoJavascript />
         </span>
         <div>
-        <button onClick={notify}>Notify!</button>
-        <ToastContainer />
+        
       </div>
       </div>
     </motion.div>
