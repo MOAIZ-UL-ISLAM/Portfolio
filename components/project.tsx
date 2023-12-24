@@ -4,9 +4,8 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import{FaGithubSquare} from "react-icons/fa"
-import{BsLink45Deg} from "react-icons/bs"
-
+import { FaGithubSquare } from "react-icons/fa";
+import { BsLink45Deg } from "react-icons/bs";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -18,11 +17,8 @@ export default function Project({
   githubUrl,
   liveUrl,
 }: ProjectProps) {
-  
   return (
-    <motion.div
-      className="group mb-3 sm:mb-8 last:mb-0"
-    >
+    <motion.div className="group mb-3 sm:mb-8 last:mb-0">
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
@@ -40,26 +36,25 @@ export default function Project({
             ))}
           </ul>
           <div className="mt-6 flex gap-4">
-          <Link
-          className="bg-white p-2 text-gray-700 text-[1.35rem] rounded-full 
+            <Link
+              className="bg-white p-2 text-gray-700 text-[1.35rem] rounded-full 
           focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105
            transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href={githubUrl}
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </Link>
-        <Link
-          className="bg-white p-2 text-gray-700 text-[1.35rem] rounded-full 
+              href={githubUrl}
+              target="_blank"
+            >
+              <FaGithubSquare />
+            </Link>
+            <Link
+              className="bg-white p-2 text-gray-700 text-[1.35rem] rounded-full 
           focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105
            transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href={liveUrl}
-          target="_blank"
-        >
-          <BsLink45Deg />
-        </Link>
+              href={liveUrl}
+              target="_blank"
+            >
+              <BsLink45Deg />
+            </Link>
           </div>
-          
         </div>
 
         <Image

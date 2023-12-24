@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import {
   BiLogoPython,
   BiLogoJavascript,
@@ -66,9 +66,7 @@ const Skills = () => {
         <span className="text-6xl  cursor-pointer  border border-black/5 rounded-full p-2 text-yellow-300">
           <BiLogoJavascript />
         </span>
-        <div>
-        
-      </div>
+        <div></div>
       </div>
     </motion.div>
   );
